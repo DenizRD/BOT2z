@@ -7,7 +7,7 @@ const config = require("../config");
 
 module.exports = async (client, interaction) => {
  
-    if (interaction.isCommand()) {
+    if (interaction.isChatInputCommand()) {
 
         const startAt = Date.now();
 
