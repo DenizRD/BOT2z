@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-const { SlashCommandBuilder, EmbedBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('@discordjs/builders');
 const data = new SlashCommandBuilder()
     .setName('ping')
     .setDescription("Bot'un gecikmesini gösterir.");
 module.exports.execute = async (client, interaction, config) => {
 
-    const embed = new EmbedBuilder()
+    const embed = new Discord.EmbedBuilder()
         .setColor("Aqua")
         .setDescription(`${Math.floor(client.ws.ping)}'ms`)
 
